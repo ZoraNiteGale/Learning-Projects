@@ -1,0 +1,33 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title">What should I do?</h3>
+    </div>
+    <div class="modal-body text-center">
+        Your current work is within {{CurrentWork}}.
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="takeMeThere();">Take Me There!</button>
+    </div>
+</div>
+
+<br />
+
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title">I need help!</h3>
+    </div>
+    <div class="modal-body text-center">
+        <div *ngFor="let link of UsefulLinks">
+            <div class="row">
+                <div class="col-sm-offset-3 col-sm-6">
+                    <div *ngIf="link.URL">
+                        <a class="text-center" href="{{link.URL}}" target="_newtab">{{link.Description}}</a>
+                    </div>
+                    <div *ngIf="link.Route">
+                        <a class="text-center cursor-pointer" (click)="link.Route();">{{link.Description}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

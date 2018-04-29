@@ -1,0 +1,33 @@
+﻿<div class="panel-group">
+    <!-- This is purposely written in a simple manner to avoid confusion for learners. -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <a data-toggle="collapse" href="#collapseExample1">Woah! Basic Binding Example!</a>
+            </h3>
+        </div>
+        <div id="collapseExample1" class="panel-collapse collapse">
+            <div style="margin-left: 10%;">
+                What is your name?
+                <!--
+                    type="text" - We want this input to primarily handle "text".
+                    [(ngModel)] - We want angular to keep track of the value in this text input and store the value in the UserInputFor_NameField property.
+                -->
+                <input type="text" [(ngModel)]="UserInputFor_NameField" />
+                <br />
+                <!--
+                    {{ResultOf_onClick_Button_ClickMe}} - We want the inner text of this div to be equal to the value in the ResultOf_onClick_Button_ClickMe property.
+                    *ngIf - We also want angular to only show this div If ResultOf_onclick_Button_ClickMe isn't empty.
+                -->
+                <div *ngIf="ResultOf_onClick_Button_ClickMe">{{ResultOf_onClick_Button_ClickMe}}</div>
+            </div>
+            <div class="panel-footer">
+                <!--
+                    {{ButtonText}} - We want the inner text of this div to be equal to the value in the ButtonText property.
+                    (click) - We want angular to handle the click event of this button, and perform the action onClick_Button_ClickMe when clicked.
+                -->
+                <button type="button" class="btn btn-primary" (click)="onClick_Button_ClickMe();">{{ButtonText}}</button>
+            </div>
+        </div>
+    </div>
+</div>
