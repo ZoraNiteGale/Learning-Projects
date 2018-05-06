@@ -1,2 +1,17 @@
 ﻿<!-- This is where you HTML and Angular bindings will be. -->
-hi
+<!-- We wanna show a kitty. desu -->
+
+<div id="yeOldKittyFaces">
+    <div (click)="CatAbuse()" >
+        :3
+    </div>
+    <div (click)="CatAbuse()" [hidden]="ShyKitty">
+        >:3
+    </div>
+</div>
+
+<div id="newHotness" >
+    <img (click)="CatAbuse()" class="BallOfFloof middle-kitty" 
+         src="https://pbs.twimg.com/profile_images/378800000532546226/dbe5f0727b69487016ffd67a6689e75a_400x400.jpeg"
+         />
+</div>
